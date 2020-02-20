@@ -23,4 +23,5 @@ urlpatterns = [
    # url(r'^admin/', admin.site.urls),
     path('user/', include('user.urls')),
     path('admin/', admin.site.urls),
+
 ]

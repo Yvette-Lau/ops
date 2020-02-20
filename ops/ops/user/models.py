@@ -9,4 +9,5 @@ class UserInfo(models.Model):
     userpwd = models.CharField(max_length=40)
     useremail = models.CharField(max_length=30)
 
-
+    def __unicode__(self):
+        return self.username

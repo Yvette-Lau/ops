@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>login & Register</title></head>
+
+  <body>
+    <div>
+      <form action="login_register" method="post">
+        {% csrf_token %}
+        <table>
+          <tbody>
+            <tr>
+              <th>username:</th>
+              <td>
+                <input type="text" id="username" name="username" maxlength="20" /></td>
+            </tr>
+            <tr>
+              <th>password:</th>
+              <td>
+                <input type="password" id="password" name="password" maxlength="20" /></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <label>
+                  <input type="radio" name="way" value="login" checked="checked" />Login</label>
+                <label>
+                  <input type="radio" name="way" value="register" />Regster</label></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="submit" id="submit" value="submit" onclick="return check()" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <script type="text/javascript">function check() {
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        if (username.value == '') {
+          alert("username can't be empty, plz type again!");
+          username.select();
+        } else if (password.value == '') {
+          alert("password can't be empty, plz type agian");
+          password.select();
+        } else {
+          return true;
+        }
+        return false;
+      }</script>
+  </body>
+
+</html>
