@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class UserInfo(nmodels.Model):
+class UserInfo(models.Model):
     '''User form'''
 
     uname = models.CharField(max_length=20)
